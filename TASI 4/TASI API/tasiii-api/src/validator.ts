@@ -1,9 +1,9 @@
 function validarChamado(titulo: string): boolean {
-    if (!titulo) {
-        throw new Error("O título do chamado não pode ser vazio.");
-    }
+  if (!titulo || titulo.trim() === "") {
+    throw new Error("O título do chamado não pode ser vazio.");
+  }
 
-    return true;
+  return true;
 }
 
 export default validarChamado;
